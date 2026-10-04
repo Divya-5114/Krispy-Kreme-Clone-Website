@@ -1,0 +1,1990 @@
+/* BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* TOP SOCIAL BAR */
+
+.topbar {
+    height: 38px;
+    background-color: #f1f4f5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 17%;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+    gap: 7px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons i {
+    width: 28px;
+    height: 28px;
+    background-color: #e21d25;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+
+/* SOCIAL ICON HOVER */
+
+.social-icons i:hover {
+    background-color: #006b45;
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 105px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* DECORATIVE DOTS */
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 165px;
+    height: 45px;
+    background-image: radial-gradient(circle, #008b68 1.7px, transparent 2px);
+    background-size: 13px 13px;
+    background-repeat: repeat;
+    z-index: 1;
+}
+
+
+/* LEFT DOTS */
+
+.navbar::before {
+    left: 0;
+}
+
+
+/* RIGHT DOTS */
+
+.navbar::after {
+    right: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 270px;
+    height: auto;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #006b45;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 0 18px;
+    white-space: nowrap;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.nav-links a:hover {
+    color: #e21d25;
+}
+
+
+/* VERTICAL SEPARATORS */
+
+.nav-links span {
+    width: 1px;
+    height: 38px;
+    background-color: #9fc5b7;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-slides {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1920 / 620;
+}
+
+.hero-slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: hero-slider 15s infinite;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.hero-slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes hero-slider {
+
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* SERVICE SECTION */
+
+.service-section {
+    width: 100%;
+    background-color: white;
+    padding: 72px 0;
+}
+
+.service-container {
+    width: 90%;
+    max-width: 1185px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* SERVICE IMAGE */
+
+.service-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    display: block;
+}
+
+
+/* SIDE CARD IMAGES */
+
+.swiggy-card .service-image,
+.zomato-card .service-image {
+    aspect-ratio: 500 / 364;
+}
+
+.swiggy-card .service-image img,
+.zomato-card .service-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* STORE IMAGE */
+
+.locator-card .service-image {
+    aspect-ratio: 1 / 1;
+}
+
+.locator-card .service-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SERVICE CONTENT */
+
+.service-content {
+    min-height: 261px;
+    padding: 24px 19px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* SERVICE HEADINGS */
+
+.service-content h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: white;
+    margin-bottom: 14px;
+}
+
+
+/* SERVICE PARAGRAPH */
+
+.service-content p {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    max-width: 340px;
+}
+
+
+/* SWIGGY CONTENT */
+
+.swiggy-card .service-content {
+    background-color: #c52d4d;
+}
+
+
+/* ZOMATO CONTENT */
+
+.zomato-card .service-content {
+    background-color: #ffb91f;
+}
+
+
+/* SERVICE BUTTON */
+
+.service-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: auto;
+    min-height: 52px;
+    padding: 0 27px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+
+/* SWIGGY BUTTON */
+
+.swiggy-button {
+    background-color: #ffb91f;
+}
+
+
+/* ZOMATO BUTTON */
+
+.zomato-button {
+    background-color: #008b68;
+}
+
+
+/* SERVICE BUTTON HOVER */
+
+.service-button:hover {
+    transform: scale(1.03);
+}
+
+
+/* STORE LOCATOR */
+
+.locator-card {
+    background-color: #008b68;
+}
+
+.locator-content {
+    height: 167px;
+    background-color: #008b68;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 28px;
+}
+
+.locator-content h2 {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+
+/* OFFER SECTION */
+
+.offer-section {
+    width: 100%;
+    background-color: white;
+    padding: 72px 0;
+}
+
+.offer-container {
+    width: 90%;
+    max-width: 1185px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+
+/* OFFER IMAGE */
+
+.offer-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* OFFER CONTENT */
+
+.offer-content {
+    background-color: #c52d4d;
+    padding: 55px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+/* OFFER LABEL */
+
+.offer-content span {
+    display: inline-block;
+    background-color: #ffb91f;
+    color: white;
+    padding: 8px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+
+/* OFFER HEADING */
+
+.offer-content h2 {
+    color: white;
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+
+/* OFFER PARAGRAPH */
+
+.offer-content p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.55;
+    font-weight: 500;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+
+/* OFFER BUTTON */
+
+.offer-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 27px;
+    background-color: #ffb91f;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+/* OFFER BUTTON HOVER */
+
+.offer-button:hover {
+    transform: scale(1.03);
+}
+
+
+/* DONUT RANGE SECTION */
+
+.donut-range-section {
+    width: 100%;
+    background-color: white;
+    padding: 30px 0 70px;
+    overflow: hidden;
+}
+
+.donut-range-container {
+    width: 100%;
+    max-width: 1185px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.donut-image {
+    width: 100%;
+}
+
+.donut-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* DONUT DOTS */
+
+.donut-dots {
+    position: absolute;
+    top: 18px;
+    width: 195px;
+    height: 45px;
+    background-image: radial-gradient(circle, #008b68 1.5px, transparent 1.8px);
+    background-size: 11px 11px;
+    z-index: 1;
+}
+
+.donut-dots-left {
+    left: 0;
+}
+
+.donut-dots-right {
+    right: 0;
+}
+
+
+/* GREEN RANGE BADGE */
+
+.range-badge {
+    position: absolute;
+    left: 22%;
+    bottom: 20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #008b68;
+    border: 4px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 3;
+    padding: 15px;
+}
+
+.range-badge span {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.range-badge small {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.range-badge strong {
+    color: white;
+    font-family: cursive;
+    font-size: 25px;
+    font-style: italic;
+    line-height: 1;
+}
+
+
+/* DONUT CONTENT */
+
+.donut-content {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.donut-message {
+    background-color: #c52d4d;
+    color: white;
+    padding: 19px 14px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.donut-button {
+    margin-top: 12px;
+    min-width: 177px;
+    min-height: 55px;
+    padding: 0 25px;
+    background-color: #ffb91f;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* SOCIAL CARD SECTION */
+
+.social-card-section {
+    width: 100%;
+    background-color: white;
+    padding: 55px 0 70px;
+}
+
+
+/* SOCIAL HEADING */
+
+.social-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.social-heading h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    color: #1f1f1f;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.social-heading p {
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.social-heading span {
+    color: #e21d5a;
+    font-weight: bold;
+}
+
+
+/* CARD CONTAINER */
+
+.card-container {
+    width: 82%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+/* CARD ITEM */
+
+.card-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.card-item:hover {
+    transform: scale(1.04);
+    z-index: 2;
+}
+
+.card-item:hover img {
+    transform: scale(1.03);
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    width: 100%;
+    background-color: #008b68;
+    padding: 28px 0;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1185px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 28px;
+    transition: 0.3s;
+}
+
+.footer-links a:first-child {
+    padding-left: 0;
+}
+
+.footer-links a:hover {
+    color: #ffb91f;
+}
+
+.footer-links span {
+    width: 1px;
+    height: 20px;
+    background-color: white;
+}
+
+.footer-copyright {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* LAPTOP VIEW */
+
+@media (max-width: 1199px) {
+
+    .navbar {
+        height: 100px;
+    }
+
+    .logo {
+        width: 32%;
+    }
+
+    .logo img {
+        width: 230px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 0 12px;
+    }
+
+    .nav-links span {
+        height: 32px;
+    }
+
+    .navbar::before,
+    .navbar::after {
+        width: 120px;
+        height: 45px;
+        background-size: 13px 13px;
+    }
+
+    .hero-slides {
+        aspect-ratio: 16 / 6;
+    }
+
+
+    /* SERVICE LAPTOP */
+
+    .service-section {
+        padding: 55px 0;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1050px;
+        gap: 25px;
+    }
+
+    .service-content {
+        min-height: 245px;
+        padding: 22px 17px 27px;
+    }
+
+    .service-content h2 {
+        font-size: 19px;
+    }
+
+    .service-content p {
+        font-size: 15px;
+    }
+
+    .service-button {
+        font-size: 18px;
+        min-height: 50px;
+        padding: 0 20px;
+    }
+
+    .locator-card .service-image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .locator-card .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .locator-content {
+        height: 145px;
+        padding-top: 28px;
+    }
+
+    .locator-content h2 {
+        font-size: 20px;
+        letter-spacing: 6px;
+    }
+
+
+    /* OFFER LAPTOP */
+
+    .offer-section {
+        padding: 55px 0;
+    }
+
+    .offer-container {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .offer-content {
+        padding: 45px 35px;
+    }
+
+    .offer-content span {
+        font-size: 15px;
+        padding: 7px 13px;
+        margin-bottom: 18px;
+    }
+
+    .offer-content h2 {
+        font-size: 32px;
+        margin-bottom: 17px;
+    }
+
+    .offer-content p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .offer-button {
+        font-size: 17px;
+        min-height: 50px;
+        padding: 0 22px;
+    }
+
+
+    /* DONUT RANGE LAPTOP */
+
+    .donut-range-section {
+        padding: 25px 0 60px;
+    }
+
+    .donut-range-container {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .donut-dots {
+        top: 15px;
+        width: 175px;
+        height: 45px;
+        background-size: 10px 10px;
+    }
+
+    .range-badge {
+        left: 22%;
+        bottom: 15px;
+        width: 185px;
+        height: 185px;
+        padding: 14px;
+    }
+
+    .range-badge span {
+        font-size: 18px;
+    }
+
+    .range-badge small {
+        font-size: 13px;
+        margin: 4px 0;
+    }
+
+    .range-badge strong {
+        font-size: 25px;
+    }
+
+    .donut-content {
+        right: 0;
+        bottom: 5px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .donut-message {
+        padding: 15px 12px;
+        font-size: 17px;
+    }
+
+    .donut-button {
+        margin-top: 0;
+        margin-left: 5px;
+        min-width: 135px;
+        min-height: 52px;
+        padding: 0 18px;
+        font-size: 18px;
+    }
+
+
+    /* SOCIAL CARD LAPTOP */
+
+    .social-card-section {
+        padding: 50px 0 60px;
+    }
+
+    .social-heading {
+        margin-bottom: 25px;
+    }
+
+    .social-heading h2 {
+        font-size: 27px;
+    }
+
+    .social-heading p {
+        font-size: 12px;
+    }
+
+    .card-container {
+        width: 82%;
+        max-width: 850px;
+        gap: 9px;
+    }
+}
+
+
+/* TABLET VIEW */
+
+@media (max-width: 991px) {
+
+    .topbar {
+        height: 35px;
+        padding-right: 30px;
+    }
+
+    .social-icons i {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .logo img {
+        width: 220px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+        padding: 0 12px;
+    }
+
+    .nav-links span {
+        height: 28px;
+    }
+
+    .navbar::before,
+    .navbar::after {
+        display: none;
+    }
+
+    .hero-slides {
+        aspect-ratio: 16 / 7;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* SERVICE TABLET */
+
+    .service-section {
+        padding: 45px 0;
+    }
+
+    .service-container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .service-content {
+        min-height: 240px;
+        padding: 21px 17px 25px;
+    }
+
+    .service-content h2 {
+        font-size: 18px;
+    }
+
+    .service-content p {
+        font-size: 15px;
+    }
+
+    .service-button {
+        font-size: 17px;
+        min-height: 48px;
+        padding: 0 18px;
+    }
+
+    .locator-content {
+        height: 145px;
+    }
+
+    .locator-content h2 {
+        font-size: 19px;
+        letter-spacing: 5px;
+    }
+
+
+    /* OFFER TABLET */
+
+    .offer-section {
+        padding: 45px 0;
+    }
+
+    .offer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .offer-image {
+        width: 100%;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .offer-content {
+        min-height: 350px;
+        padding: 40px 35px;
+    }
+
+    .offer-content span {
+        font-size: 15px;
+        padding: 7px 13px;
+        margin-bottom: 17px;
+    }
+
+    .offer-content h2 {
+        font-size: 31px;
+        margin-bottom: 17px;
+    }
+
+    .offer-content p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .offer-button {
+        font-size: 17px;
+        min-height: 50px;
+        padding: 0 21px;
+    }
+
+
+    /* DONUT RANGE TABLET */
+
+    .donut-range-section {
+        padding: 45px 0 70px;
+    }
+
+    .donut-range-container {
+        width: 100%;
+        position: relative;
+    }
+
+    .donut-image {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .donut-dots {
+        top: 15px;
+        width: 80px;
+        height: 45px;
+        background-size: 10px 10px;
+    }
+
+    .donut-dots-left {
+        left: 0;
+    }
+
+    .donut-dots-right {
+        right: 0;
+    }
+
+    .range-badge {
+        left: 29%;
+        top: 10px;
+        bottom: auto;
+        width: 220px;
+        height: 220px;
+        padding: 20px;
+    }
+
+    .range-badge span {
+        font-size: 25px;
+    }
+
+    .range-badge small {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .range-badge strong {
+        font-size: 34px;
+    }
+
+    .donut-content {
+        position: static;
+        width: 464px;
+        max-width: 100%;
+        margin: 125px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(4%);
+    }
+
+    .donut-message {
+        width: 464px;
+        max-width: 100%;
+        padding: 17px 14px;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .donut-button {
+        margin-top: 0;
+        min-width: 177px;
+        min-height: 55px;
+        padding: 0 22px;
+        font-size: 20px;
+    }
+
+
+    /* SOCIAL CARD TABLET */
+
+    .social-card-section {
+        padding: 50px 0 60px;
+    }
+
+    .social-heading {
+        margin-bottom: 25px;
+    }
+
+    .social-heading h2 {
+        font-size: 26px;
+    }
+
+    .social-heading p {
+        font-size: 12px;
+    }
+
+    .card-container {
+        width: 84%;
+        max-width: 760px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 9px;
+    }
+
+    .card-item {
+        border-radius: 9px;
+    }
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 767px) {
+
+    .topbar {
+        height: 32px;
+        padding-right: 15px;
+    }
+
+    .social-icons {
+        gap: 5px;
+    }
+
+    .social-icons i {
+        width: 23px;
+        height: 23px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        height: 55px;
+        padding: 0 15px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar::before,
+    .navbar::after {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        height: 55px;
+        margin-bottom: 0;
+        position: relative;
+        justify-content: center;
+    }
+
+    .logo::before {
+        content: "☰";
+        position: absolute;
+        left: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #008b68;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-slides {
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-slide {
+        height: 100%;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* SERVICE MOBILE */
+
+    .service-section {
+        padding: 35px 0;
+    }
+
+    .service-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .service-content {
+        min-height: 245px;
+        padding: 22px 18px 27px;
+    }
+
+    .service-content h2 {
+        font-size: 20px;
+    }
+
+    .service-content p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .service-button {
+        font-size: 19px;
+        min-height: 52px;
+        padding: 0 22px;
+    }
+
+    .locator-content {
+        height: 145px;
+        padding-top: 27px;
+    }
+
+    .locator-content h2 {
+        font-size: 21px;
+        letter-spacing: 7px;
+    }
+
+
+    /* OFFER MOBILE */
+
+    .offer-section {
+        padding: 35px 0;
+    }
+
+    .offer-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offer-image {
+        width: 100%;
+    }
+
+    .offer-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .offer-content {
+        min-height: 360px;
+        padding: 32px 25px;
+    }
+
+    .offer-content span {
+        font-size: 14px;
+        padding: 7px 12px;
+        margin-bottom: 15px;
+    }
+
+    .offer-content h2 {
+        font-size: 27px;
+        margin-bottom: 16px;
+    }
+
+    .offer-content p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 23px;
+    }
+
+    .offer-button {
+        max-width: 180px;
+        min-height: 50px;
+        padding: 8px 18px;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 17px;
+    }
+
+
+    /* DONUT RANGE MOBILE */
+
+    .donut-range-section {
+        padding: 35px 0 60px;
+    }
+
+    .donut-range-container {
+        width: 100%;
+        position: relative;
+    }
+
+    .donut-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .donut-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .donut-dots {
+        top: 0;
+        width: 45px;
+        height: 55px;
+        background-size: 9px 9px;
+    }
+
+    .donut-dots-left {
+        left: 0;
+    }
+
+    .donut-dots-right {
+        right: 0;
+    }
+
+    .range-badge {
+        left: auto;
+        right: 11%;
+        top: -3px;
+        bottom: auto;
+        width: 160px;
+        height: 160px;
+        padding: 12px;
+    }
+
+    .range-badge span {
+        font-size: 17px;
+    }
+
+    .range-badge small {
+        font-size: 12px;
+        margin: 3px 0;
+    }
+
+    .range-badge strong {
+        font-size: 23px;
+    }
+
+    .donut-content {
+        position: static;
+        width: 100%;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donut-message {
+        width: 230px;
+        max-width: 230px;
+        padding: 17px 14px;
+        font-size: 19px;
+        line-height: 1.5;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .donut-button {
+        margin-top: 12px;
+        min-width: 176px;
+        min-height: 55px;
+        padding: 0 20px;
+        font-size: 19px;
+    }
+
+
+    /* SOCIAL CARD MOBILE */
+
+    .social-card-section {
+        padding: 45px 0 55px;
+    }
+
+    .social-heading {
+        width: 90%;
+        margin: 0 auto 22px;
+    }
+
+    .social-heading h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .social-heading p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .card-container {
+        width: 90%;
+        max-width: 500px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .card-item {
+        border-radius: 8px;
+    }
+
+    .card-item:hover {
+        transform: scale(1.03);
+    }
+
+    .card-item:hover img {
+        transform: scale(1.02);
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .topbar {
+        height: 30px;
+        padding-right: 10px;
+    }
+
+    .social-icons i {
+        width: 21px;
+        height: 21px;
+        font-size: 11px;
+    }
+
+    .navbar {
+        height: 55px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .logo::before {
+        left: 25px;
+        font-size: 28px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .hero-slides {
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-slide {
+        height: 100%;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* SERVICE SMALL MOBILE */
+
+    .service-section {
+        padding: 30px 0;
+    }
+
+    .service-container {
+        width: 92%;
+        gap: 20px;
+    }
+
+    .service-content {
+        min-height: 225px;
+        padding: 20px 16px 23px;
+    }
+
+    .service-content h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .service-content p {
+        font-size: 15px;
+    }
+
+    .service-button {
+        font-size: 17px;
+        min-height: 48px;
+        padding: 0 17px;
+    }
+
+    .locator-content {
+        height: 130px;
+        padding-top: 24px;
+    }
+
+    .locator-content h2 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+
+    /* OFFER SMALL MOBILE */
+
+    .offer-section {
+        padding: 30px 0;
+    }
+
+    .offer-container {
+        width: 92%;
+    }
+
+    .offer-content {
+        min-height: 340px;
+        padding: 27px 20px;
+    }
+
+    .offer-content span {
+        font-size: 12px;
+        padding: 6px 10px;
+        margin-bottom: 13px;
+    }
+
+    .offer-content h2 {
+        font-size: 23px;
+        margin-bottom: 14px;
+    }
+
+    .offer-content p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .offer-button {
+        max-width: 145px;
+        min-height: 48px;
+        padding: 7px 15px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+
+    /* DONUT RANGE SMALL MOBILE */
+
+    .donut-range-section {
+        padding: 30px 0 55px;
+    }
+
+    .donut-range-container {
+        width: 100%;
+    }
+
+    .donut-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .donut-dots {
+        top: 0;
+        width: 42px;
+        height: 50px;
+        background-size: 8px 8px;
+    }
+
+    .donut-dots-left {
+        left: 0;
+    }
+
+    .donut-dots-right {
+        right: 0;
+    }
+
+    .range-badge {
+        right: 9%;
+        top: -2px;
+        bottom: auto;
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+
+    .range-badge span {
+        font-size: 15px;
+    }
+
+    .range-badge small {
+        font-size: 11px;
+        margin: 3px 0;
+    }
+
+    .range-badge strong {
+        font-size: 21px;
+    }
+
+    .donut-content {
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .donut-message {
+        width: 205px;
+        max-width: 205px;
+        padding: 15px 12px;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .donut-button {
+        min-width: 145px;
+        min-height: 50px;
+        padding: 0 17px;
+        font-size: 18px;
+    }
+
+
+    /* SOCIAL CARD SMALL MOBILE */
+
+    .social-card-section {
+        padding: 40px 0 50px;
+    }
+
+    .social-heading {
+        width: 92%;
+        margin-bottom: 20px;
+    }
+
+    .social-heading h2 {
+        font-size: 23px;
+        margin-bottom: 9px;
+    }
+
+    .social-heading p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .card-container {
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .card-item {
+        border-radius: 7px;
+    }
+
+    .card-item:hover {
+        transform: scale(1.02);
+    }
+
+    .card-item:hover img {
+        transform: scale(1.01);
+    }
+}
+
+
+/* DONUT RANGE 320PX */
+
+@media (max-width: 350px) {
+
+    .donut-range-section {
+        padding: 25px 0 50px;
+    }
+
+    .donut-range-container {
+        width: 100%;
+    }
+
+    .donut-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .donut-dots {
+        top: 0;
+        width: 38px;
+        height: 45px;
+        background-size: 8px 8px;
+    }
+
+    .donut-dots-left {
+        left: 0;
+    }
+
+    .donut-dots-right {
+        right: 0;
+    }
+
+    .range-badge {
+        right: 7%;
+        top: -2px;
+        bottom: auto;
+        width: 140px;
+        height: 140px;
+        padding: 9px;
+    }
+
+    .range-badge span {
+        font-size: 14px;
+    }
+
+    .range-badge small {
+        font-size: 10px;
+        margin: 2px 0;
+    }
+
+    .range-badge strong {
+        font-size: 20px;
+    }
+
+    .donut-content {
+        margin-top: 28px;
+    }
+
+    .donut-message {
+        width: 138px;
+        max-width: 138px;
+        padding: 14px 10px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .donut-button {
+        min-width: 152px;
+        min-height: 50px;
+        padding: 0 15px;
+        font-size: 17px;
+    }
+
+}
+
+/* FOOTER LAPTOP */
+
+@media (max-width: 1199px) {
+
+    .footer {
+        padding: 26px 0;
+    }
+
+    .footer-container {
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        padding: 0 20px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+    }
+}
+
+
+/* FOOTER TABLET */
+
+@media (max-width: 991px) {
+
+    .footer {
+        padding: 25px 0;
+    }
+
+    .footer-container {
+        width: 90%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+
+/* FOOTER MOBILE */
+
+@media (max-width: 767px) {
+
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer-container {
+        width: 90%;
+        gap: 16px;
+    }
+
+    .footer-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+        padding: 0 12px;
+    }
+
+    .footer-links span {
+        height: 17px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        white-space: normal;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+
+/* FOOTER SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 22px 0;
+    }
+
+    .footer-container {
+        width: 92%;
+        gap: 14px;
+    }
+
+    .footer-links {
+        row-gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+
+    .footer-links span {
+        height: 15px;
+    }
+
+    .footer-copyright {
+        font-size: 11px;
+    }
+}
